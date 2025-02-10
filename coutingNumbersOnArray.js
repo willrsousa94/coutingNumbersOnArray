@@ -5,5 +5,5 @@ function arrayOfRandomOfZeroToTen(number){
       arrayRandom.push(Math.random() * 11)
   }
 
-  console.log(arrayRandom)
+  return arrayRandom
 }

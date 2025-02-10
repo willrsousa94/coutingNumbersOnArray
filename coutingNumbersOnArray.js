@@ -18,7 +18,7 @@ function countEightToTenOfArray(array){
       }
   });
 
-  return `There was being generated ${arrayEightToTen.length} numbers between 8 and 10 on this array`
+  return `There was being generated ${arrayEightToTen.length} numbers between 8 and 10 on this array, the array generated was: ${array}`
 }
 
 console.log(countEightToTenOfArray(arrayOfRandomOfZeroToTen(20)))

@@ -7,3 +7,16 @@ function arrayOfRandomOfZeroToTen(number){
 
   return arrayRandom
 }
+
+function countEightToTenOfArray(array){
+
+  let arrayEightToTen = [];
+
+  array.forEach(function(el){
+      if(el > 7){
+          arrayEightToTen.push(el);
+      }
+  });
+
+  return `There was being generated ${arrayEightToTen.length} numbers between 8 and 10 on this array`
+}

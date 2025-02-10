@@ -8,17 +8,16 @@ function arrayOfRandomOfZeroToTen(number){
   return arrayRandom
 }
 
-function countEightToTenOfArray(array){
+function countMinToMaxOfArray(min, max, array){
 
-  let arrayEightToTen = [];
+  let arrayMinToMax = [];
 
   array.forEach(function(el){
-      if(el > 7){
-          arrayEightToTen.push(el);
+      if(el >= min && el <= max){
+          arrayMinToMax.push(el);
       }
   });
 
-  return `There was being generated ${arrayEightToTen.length} numbers between 8 and 10 on this array, the array generated was: ${array}`
+  return `There was being generated ${arrayMinToMax.length} numbers between ${min} and ${max} on this array, the array generated was: [${array}]`
 }
-
 console.log(countEightToTenOfArray(arrayOfRandomOfZeroToTen(20)))

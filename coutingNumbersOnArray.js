@@ -1,30 +1,26 @@
-function arrayOfRandomOfZeroToTen(number){
-    
+function arrayOfRandomOfZeroToTen(numberOfNumbersOnArray){
+
   let arrayRandom = [];
-  for(let i = 0; i < number; i++){
-      arrayRandom.push(Math.random() * 11)
+  for(let i = 0; i < numberOfNumbersOnArray; i++){
+      arrayRandom.push(Math.floor(Math.random() * 11))
   }
 
-  return arrayRandom
+  return arrayRandom;
 }
 
 function countMinToMaxOfArray(min, max, array){
 
   if(min > max){
-      return Cannot `check the result, Min value ${min} is greater than Max value ${max}`
+      return `Cannot check the result, Min value ${min} is greater than Max value ${max}`
   } else {
-      let arrayMinToMax = [];
-  
-      array.forEach(function(el){
-          if(el >= min && el <= max){
-              arrayMinToMax.push(el);
-          }
-      });
+      let arrayMinToMax = array.filter(newArray => newArray >= min && newArray <= max)
+
       if(min == max){
           return `There was being generated ${arrayMinToMax.length} equals to ${min} on this array, the array generated was: [${array}]`
       }else{
-          return `There was being generated ${arrayMinToMax.length} numbers between ${min} and ${max} on this array, the array generated was: [${array}]`
+          return `here was being generated ${arrayMinToMax.length} numbers between ${min} and ${max} on this array, the array generated was: [${array}]`
       }
   }
 }
-console.log(countEightToTenOfArray(arrayOfRandomOfZeroToTen(20)))
+
+console.log(countMinToMaxOfArray(8,8,arrayOfRandomOfZeroToTen(30)));
